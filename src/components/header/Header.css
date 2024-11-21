@@ -1,0 +1,82 @@
+header {
+    background-color: #ff742b;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15vh;
+    padding: 0 20px;
+
+}
+
+/* logo block  */
+.logoBlack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoText {
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.logo {
+    height: 3rem;
+}
+
+.searchbar {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Optional, adjust as needed */
+    margin-right: 19rem;
+  }
+  
+  .searchbar .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #f37a09;
+  }
+  
+  .searchbar input {
+    width: 57vw;
+    height: 40px;
+    padding-left: 40px; /* Space for the icon */
+    border: none;
+    font-size: 16px;
+    color: black;
+  }
+
+  .poweredBy{
+    position: absolute;
+    top: 10px;
+    right: -18rem;
+  }
+
+  .poweredBy span{
+    position: absolute;
+    left: -78px;
+    top: 51%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #888;
+  
+  }
+  .poweredBy a{
+    position: relative;
+    right: 0rem;
+  
+  }
+  
+
+
+  
+
+.setting {
+    color: black;
+}

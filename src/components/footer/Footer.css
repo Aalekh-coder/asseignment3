@@ -1,0 +1,18 @@
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: 12px;
+
+}
+
+/* first li  */
+.first{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}

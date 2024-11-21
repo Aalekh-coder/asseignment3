@@ -1,0 +1,8 @@
+.body{
+    background-color: #fff;
+    color: black;
+    margin: 0 15vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
