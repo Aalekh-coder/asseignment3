@@ -1,22 +1,11 @@
 import { CiSearch } from "react-icons/ci"
 import "./Header.css"
-import { useState } from "react";
-// import { searchPage } from "../../api/GetApi";
-const Header = () => {
-  // const [data, setData] = useState([]);
-  const [input, setInput] = useState("")
 
-  // const getfrontPageData = async (input) => {
-  //   const res = await searchPage(input);
-  //   setData(res.data.hits[0])
-  // }
-  // console.log(data)
-  // useEffect(() => {
-  //   getfrontPageData();
-  // }, [])
 
+
+const Header = ({searchInput,setSearchInput}) => {
+  
   const savedUsername = localStorage.getItem("username");
-
   return (
     <header>
       <div className="logoBlack">
@@ -34,7 +23,7 @@ const Header = () => {
 
       <div className="searchbar">
         <CiSearch className="search-icon" />
-        <input type="text" placeholder="Search stories by title, url or author" value={input} onChange={(e)=> setInput(e.target.value)}/>
+        <input type="text" placeholder="Search stories by title, url or author" value={searchInput} onChange={(e)=> setSearchInput(e.target.value)}/>
         <div className="poweredBy">
           <span>Search by</span>
           <a href="https://www.algolia.com/developers/?utm_source=hackernews&utm_medium=referral" title="Realtime Search Engine" target="_blank">

@@ -12,16 +12,17 @@ const Filtering = ({ filter, pop,
                 <div className="searchFliter">
                     <span>Search</span>
                     <select onChange={(e) => filter(e.target.value)}>
-                        <option value="story" className="option">Stories</option>
-                        <option value="comment" className="option">Comments</option>
-                        <option value="ask_hn" className="option">Ask HN</option>
-                        <option value="show_hn" className="option">Show HN</option>
-                        <option value="job" className="option">Jobs</option>
-                        <option value="poll" className="option">Poll</option>
+                        <option value="?" className="option">All</option>
+                        <option value="=story" className="option">Stories</option>
+                        <option value="=comment" className="option">Comments</option>
+                        <option value="=ask_hn" className="option">Ask HN</option>
+                        <option value="=show_hn" className="option">Show HN</option>
+                        <option value="=job" className="option">Jobs</option>
+                        <option value="=poll" className="option">Poll</option>
 
                     </select>
                 </div>
-
+                {/* https://hn.algolia.com/api/v1/search?query=?&tags? */}
 
 
                 <div className="searchFliter">
