@@ -34,8 +34,10 @@ const Dashboard = () => {
   
 
   // filtering 
-  const handleSeachTag = (value) => {
-    getFiltering(value)
+  const handleSeachTag = async (value) => {
+    const res = await tagFilterPage(value);
+    setData(res.data.hits)
+
   }
   
   const handleByPopulity = (value) => {
@@ -46,10 +48,10 @@ const Dashboard = () => {
     console.log(value)
   }
 
-  const getFiltering = async (filter) => {
-    const res = await getFiltering(filter);
-    setData(res.data.hits)
-  }
+  // const getFiltering = async (filter) => {
+  //   const res = await tagFilterPage(filter);
+  //   console.log(res)
+  // }
 
 
   useEffect(() => {
