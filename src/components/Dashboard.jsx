@@ -4,13 +4,13 @@ import Filtering from "./filtering/Filtering"
 import Pagination from "./pagination/Pagination"
 import Content from "./content/Content"
 import { useEffect, useState } from "react"
-import { frontPage, paginationPage } from "../api/GetApi"
+import { frontPage, paginationPage, tagFilterPage } from "../api/GetApi"
 
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(null);
-  const [filtering,setFiltering] = useState(["story","comment","poll","pollopt","show_hn","ask_hn","job"])
+ 
   
   const getPagination = async (pageNo) => {
     const res = await paginationPage(pageNo);
@@ -26,12 +26,31 @@ const Dashboard = () => {
   }
   const currentPage = (currPage) => {
     setPage(Number(currPage.target.innerText));
-    console.log(currPage.target.innerText)
   } 
   const getfrontPageData = async () => {
         const res = await frontPage();
         setData(res.data.hits)
-      }
+  }
+  
+
+  // filtering 
+  const handleSeachTag = (value) => {
+    getFiltering(value)
+  }
+  
+  const handleByPopulity = (value) => {
+    console.log(value)
+  }
+
+  const handleByLatest = (value) => {
+    console.log(value)
+  }
+
+  const getFiltering = async (filter) => {
+    const res = await getFiltering(filter);
+    setData(res.data.hits)
+  }
+
 
   useEffect(() => {
     getPagination(page)
@@ -43,7 +62,7 @@ const Dashboard = () => {
   return (
     <div>
       <Header />
-      <Filtering />
+      <Filtering filter={handleSeachTag} pop={handleByPopulity} date={handleByLatest}/>
       <Content data={data} />
       <Pagination addHandlePage={addHandlePage} subHandlePage={subHandlePage} currentPage={currentPage} />
       <Footer />

@@ -3,7 +3,7 @@ const Footer = () => {
     return (
         <div>
             <ul>
-                <li className="first">
+                <li id="first">
                     <a target="_blank" href="https://hn.algolia.com/about">About</a>
                 </li>
                 <li>

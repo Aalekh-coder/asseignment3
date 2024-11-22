@@ -20,3 +20,6 @@ export const paginationPage = (pageNo) => {
     return api.get(`/search?page=${pageNo}`)
 }
 
+export const tagFilterPage = (value) => {
+    return api.get(`/search?query=?&tags=${value}`)
+}

@@ -1,7 +1,6 @@
 .upperFilter {
     display: flex;
-    gap: 1rem;
-    margin-right: 29rem;
+    margin-right: 19rem;
     
 }
 
@@ -36,4 +35,36 @@ section {
 }
 .icons{
     margin-top: 5px;
+}
+
+select{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-align: left;
+    padding: 4px 1px;
+    margin: 0 8px 0 2px;
+    border: solid 1px #c3c3c3;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    color: #5c5c5c;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    appearance: none;
+    border: none;
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #5c5c5c;
 }
