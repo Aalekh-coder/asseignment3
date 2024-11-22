@@ -5,15 +5,11 @@
 // import Content from "./content/Content"
 // import { useEffect, useState } from "react"
 // import { frontPage, paginationPage, tagFilterPage,searchPage } from "../api/GetApi"
-
-
 // const Dashboard = () => {
 //   const [data, setData] = useState([]);
 //   const [page, setPage] = useState(null);
 //   const [searchInput, setSearchInput] = useState("");
- 
-  
-//   const getPagination = async (pageNo) => {
+ //   const getPagination = async (pageNo) => {
 //     const res = await paginationPage(pageNo);
 //     setData(res.data.hits)
 //   }
@@ -32,31 +28,21 @@
 //         const res = await frontPage();
 //         setData(res.data.hits)
 //   }
-  
-
 //   // filtering
 //   const handleSeachTag = async (value) => {
 //     const res = await tagFilterPage(value);
 //     setData(res.data.hits)
 //   }
-
 //   // search page
 //   const handleSearchPage = async(input) => {
 //     const res = await searchPage(input)
 //     setData(res.data.hits)
 //   }
-  
-  
-
-
 //   useEffect(() => {
 //     getPagination(page)
 //     getfrontPageData();
-//     handleSearchPage(searchInput);
-    
+//     handleSearchPage(searchInput);   
 //   }, [page,searchInput])
-  
-
 //   return (
 //     <div>
 //       <Header searchInput={searchInput} setSearchInput={setSearchInput} />
@@ -67,20 +53,7 @@
 //     </div>
 //   )
 // }
-
 // export default Dashboard
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 import Header from "./header/Header";
